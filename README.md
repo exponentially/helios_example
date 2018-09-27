@@ -30,4 +30,6 @@ from any iex console above, check functions that are available in `helios_exampl
 For instance you could run:
 
 ```elixir
-iex> 
+iex> params = %{id: "1", first_name: "Test", last_name: "User", email: "email@example.com"}
+iex> HeliosExample.create_user("1", params) |> Map.get(:response)
+```
