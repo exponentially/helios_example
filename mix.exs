@@ -1,0 +1,31 @@
+defmodule HeliosExample.MixProject do
+  use Mix.Project
+
+  def project do
+    [
+      app: :helios_example,
+      version: "0.1.0",
+      elixir: "~> 1.6",
+      start_permanent: Mix.env() == :prod,
+      deps: deps()
+    ]
+  end
+
+  # Run "mix help compile.app" to learn about applications.
+  def application do
+    [
+      extra_applications: [:logger, :extreme, :helios],
+      mod: {HeliosExample.Application, []}
+    ]
+  end
+
+  # Run "mix help deps" to learn about dependencies.
+  defp deps do
+    [
+      {:extreme, "~> 0.13.3"},
+      #{:helios, path: "../helios"},
+      {:helios, github: "exponentially/helios", branch: :master},
+      {:libcluster, "~> 3.0"}
+    ]
+  end
+end
