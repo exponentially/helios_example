@@ -22,9 +22,9 @@ defmodule HeliosExample.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:extreme, "~> 0.13.3"},
-      #{:helios, path: "../helios"},
-      {:helios, github: "exponentially/helios", branch: :master},
+      {:helios, path: "../helios"},
+      # {:helios, github: "exponentially/helios", branch: :master},
+      {:extreme, "~> 0.13", override: true},
       {:libcluster, "~> 3.0"}
     ]
   end
