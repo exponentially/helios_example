@@ -77,7 +77,6 @@ config :helios_example, HeliosExample.Journals.Eventstore,
 
 config :helios_example, HeliosExample.Endpoint,
   code_reloader: true,
-  adapter: Helios.Endpoint.Facade,
   journal: HeliosExample.Journals.Eventstore,
   registry: [
     sync_nodes_timeout: 5_000,
