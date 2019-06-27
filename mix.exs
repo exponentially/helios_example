@@ -23,9 +23,10 @@ defmodule HeliosExample.MixProject do
   defp deps do
     [
       {:helios, path: "../helios"},
-      # {:helios, github: "exponentially/helios", branch: :master},
+      # {:helios, "~> 0.1"},
       {:extreme, "~> 0.13", override: true},
-      {:libcluster, "~> 3.0"}
+      {:libcluster, "~> 3.0"},
+      {:benchee, "~> 0.11"}
     ]
   end
 end
